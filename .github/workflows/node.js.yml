@@ -12,13 +12,9 @@ jobs:
   build_test:
     runs-on: ubuntu-latest
 
-    env:
-      CI: true
-
     steps:
-    
       - uses: actions/checkout@v4
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -27,3 +23,5 @@ jobs:
       - run: npm install
       - run: npm run build --if-present
       - run: npm test
+        env:
+          CI: true
