@@ -36,20 +36,20 @@ describe("Wrong input should give errors", () => {
 
 // ------------------------------------------------------- Unit Tests for API 2 ------------------------------------------ //
 
-describe("API 2 string array and length to equal claim risk", () => {
-  test("string should equal 3 matches", () => {
-    expect(
-      sum.riskRating(
-        "My only claim was a bump into my house's garage door that left a bump on my car. There are no other scratches"
-      )
-    ).toStrictEqual(3);
-  });
-  test("string should equal 0 matches, therefore claim risk of 1", () => {
-    expect(
-      sum.riskRating("I have no accidents, so should have a low risk rating.")
-    ).toStrictEqual(1);
-  });
-});
+// describe("API 2 string array and length to equal claim risk", () => {
+//   test("string should equal 3 matches", () => {
+//     expect(
+//       sum.riskRating(
+//         "My only claim was a bump into my house's garage door that left a bump on my car. There are no other scratches"
+//       )
+//     ).toStrictEqual(3);
+//   });
+//   test("string should equal 0 matches, therefore claim risk of 1", () => {
+//     expect(
+//       sum.riskRating("I have no accidents, so should have a low risk rating.")
+//     ).toStrictEqual(1);
+//   });
+// });
 
 //--------------------------------------------------------- Unit Test for API 3 -------------------------------------------- //
 

@@ -43,26 +43,26 @@ function carValue(calcString, carYear) {
 
 // -------------------------------- API 2 ------------------------------------------------------------------------------------ //
 
-function riskRating(sentence) {
-  const wordToExtract = /(collide|crash|scratch|bump|smash)/g;
-  // using regular expressions to match all occurances of the below expressions globally; Regular expressions are patterns used to match character combinations in strings.
-  const extractedWords = [];
+// function riskRating(sentence) {
+//   const wordToExtract = /(collide|crash|scratch|bump|smash)/g;
+//   // using regular expressions to match all occurances of the below expressions globally; Regular expressions are patterns used to match character combinations in strings.
+//   const extractedWords = [];
 
-  let match;
-  //Jest was returning 1 instead of 3 in test; not properly recognizing multiple matches in the string. Jest is not correctly handling the global flag (g) in the regular expression.
-  while ((match = wordToExtract.exec(sentence)) !== null) {
-    extractedWords.push(match[0]);
-  }
-  // while loop; when extracted words is not null, pushes to array
+//   let match;
+//   //Jest was returning 1 instead of 3 in test; not properly recognizing multiple matches in the string. Jest is not correctly handling the global flag (g) in the regular expression.
+//   while ((match = wordToExtract.exec(sentence)) !== null) {
+//     extractedWords.push(match[0]);
+//   }
+//   // while loop; when extracted words is not null, pushes to array
 
-  const totalPoints = extractedWords.length;
+//   const totalPoints = extractedWords.length;
 
-  if (extractedWords.length === 0) {
-    return 1;
-  }
+//   if (extractedWords.length === 0) {
+//     return 1;
+//   }
 
-  return totalPoints;
-}
+//   return totalPoints;
+// }
 
 // ----------------------------------------- API 3 --------------------------------------------------------- //
 
