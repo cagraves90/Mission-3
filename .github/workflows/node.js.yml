@@ -56,5 +56,5 @@ jobs:
 
       - name: Deploy via GCS
         run: |
-          gsutil -m rm -rf gs://mission-3/* || echo "$?"
-          gsutil -m cp -r * gs://mission-3/
+          gsutil -m rm -rf gs://cloud-ai-platform-9f028fd0-c644-4017-b601-2dc043ce2075/* || echo "$?"
+          gsutil -m cp -r * gs://cloud-ai-platform-9f028fd0-c644-4017-b601-2dc043ce2075/
