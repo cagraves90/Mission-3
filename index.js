@@ -40,12 +40,12 @@ app.post("/carValueInput", (req, res) => {
 module.exports = app;
 
 /* ========================== PORT ============================= */
-const port = process.env.MYSQL_PORT;
+// const port = process.env.MYSQL_PORT;
 
-app
-  .listen(port, () => {
-    console.log(`The server is listening at http://localhost:${port}`);
-  })
-  .on("error", (error) => {
-    console.log(error);
-  });
+// app
+//   .listen(port, () => {
+//     console.log(`The server is listening at http://localhost:${port}`);
+//   })
+//   .on("error", (error) => {
+//     console.log(error);
+//   });
