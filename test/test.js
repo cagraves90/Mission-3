@@ -2,6 +2,11 @@ const sum = require("../sum");
 
 const request = require("supertest");
 const app = require("../index.js");
+const serverPort = require("../server");
+
+afterAll(async () => {
+  await new Promise((resolve) => serverPort.close(resolve));
+});
 
 // -------------------------------------------------- Unit tests for API 1 ----------------------------------------------------------------- //
 

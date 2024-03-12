@@ -4,6 +4,10 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
+const http = require("http");
+const server = http.createServer(app);
+module.exports = server;
+
 /* ============== Middleware ================== */
 app.use(cors());
 app.use(express.json());
@@ -40,12 +44,15 @@ app.post("/carValueInput", (req, res) => {
 module.exports = app;
 
 /* ========================== PORT ============================= */
-// const port = process.env.MYSQL_PORT;
 
-// app
-//   .listen(port, () => {
-//     console.log(`The server is listening at http://localhost:${port}`);
-//   })
-//   .on("error", (error) => {
-//     console.log(error);
-//   });
+const port = process.env.MYSQL_PORT;
+
+const serverPort = app
+  .listen(port, () => {
+    console.log(`The server is listening at http://localhost:${port}`);
+  })
+  .on("error", (error) => {
+    console.log(error);
+  });
+
+module.exports = serverPort;
