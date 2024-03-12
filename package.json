@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --detectOpenHandles",
-    "start": "node index.js"
+    "test": "jest --watchAll --verbose --detectOpenHandles",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
