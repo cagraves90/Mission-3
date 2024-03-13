@@ -2,7 +2,7 @@ const sum = require("../sum");
 
 const request = require("supertest");
 const app = require("../index.js");
-const serverPort = require("../server");
+const serverPort = require("../index.js");
 
 afterAll(async () => {
   await new Promise((resolve) => serverPort.close(resolve));
