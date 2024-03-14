@@ -9,10 +9,15 @@ on:
     branches: ["main"]
 
 jobs:
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+  # This workflow contains a two jobs, one called "build_test" and a second called "deploy"
   build_test:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     steps:
+      # Steps represent a sequence of tasks that will be executed as part of the job
       - uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -26,25 +31,17 @@ jobs:
         env:
           CI: true
 
-  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-
-  # This workflow contains a single job called "deploy"
   deploy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    # steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    # - uses: actions/checkout@v2
-
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20.x"
-      # - run: npm test
 
       # Setup gcloud CLI
 
